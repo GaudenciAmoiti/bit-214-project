@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Personal Portfolio</title>
+<style>
+/* Global Styles */
+body {
+    background-color: green;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: grey;
+    padding: 20px;
+}
+header h1 {
+    margin: 0;
+    color: white;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: yellow;
+    padding: 20px;
+    float: left;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    margin-bottom: 10px;
+}
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+nav ul li.active a {
+    color: red;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: grey;
+    color: white;
+}
+
+/* Footer Styles */
+footer {
+    background-color: grey;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* JavaScript for Navigation */
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            const targetId = link.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            sections.forEach(section => {
+                section.classList.remove("active");
+            });
+
+            targetSection.classList.add("active");
+
+            navLinks.forEach(navLink => {
+                navLink.parentElement.classList.remove("active");
+            });
+
+            link.parentElement.classList.add("active");
+        });
+    });
+});
+</style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1>Interactive Personal Portfolio</h1></header>
+    </div>
+</header>
+<br>
+<nav>
+    <ul>
+        <li class="active"><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+<header>
+<section id="home" class="active">
+    <div class="container">
+        <h2>Home</h2></header>
+        <p>Welcome to my personal portfolio website!</p>
+        <p>I am Gaudencia, a passionate undergraduate student with a keen interest in web development. This website serves as a showcase of my skills, projects, academic achievements, and contact information.</p>
+        <p>Feel free to explore and get to know more about me. If you have any inquiries or would like to collaborate, don't hesitate to reach out.</p>
+    </div>
+</section>
+<header>
+<section id="about">
+    <div class="container">
+        <h2>About Me</h2></header>
+        <div class="profile">
+            <img src="C:\Users\USER\Desktop\GAUDIE PROJECT\profile photo.jpg" alt="Profile Picture" width="200">
+        </div>
+        <div class="details">
+            <h3>Academic Details</h3>
+            <p>Insert your academic details here.</p>
+            <h3>Skills</h3>
+            <ol>
+                <li>HTML: Proficient in writing semantic and accessible HTML code.</li>
+                <li>CSS: Skilled in styling web pages using CSS, including Flexbox and Grid layouts.</li>
+                <li>JavaScript: Experienced in developing interactive web applications using JavaScript and libraries like jQuery.</li>
+            </ol>
+            <h3>Academic Journey Summary</h3>
+            <table border="1" style="border-collapse: collapse; border: rgb(2, 24, 21);">
+                <thead>
+                    <tr style="background-color: red; color: white;">
+                        <th>Year</th>
+                        <th>LEvel</th>
+                        <th>Institution</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2010</td>
+                        <td>KCPE</td>
+                        <td>ST. MERCY</td>
+                    </tr>
+                    <tr>
+                        <td>2014</td>
+                        <td>KCSE</td>
+                        <td>MITUA GIRLS</td>
+                    </tr>
+                    <tr>
+                        <td>2020</td>
+                        <td>BACHELOR OF IT</td>
+                        <td>MASINDE MULIRO</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Work Experience</h3>
+            <p>Insert your work experience details here.</p>
+            <h3>Interests</h3>
+            <ul>
+                <li>Web Development</li>
+                <li>Technology Trends</li>
+                <li>Reading</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<header>
+<section id="services">
+    <div class="container">
+        <h2>Services</h2></header>
+        <p>Welcome to our services page. We offer a range of services to meet your needs.</p>
+        <h3>Services Offered:</h3>
+        <ul>
+            <li>Web Design</li>
+            <li>Graphic Design</li>
+            <li>SEO Optimization</li>
+            <li>Content Writing</li>
+            <li>Website Maintenance</li>
+        </ul>
+        <h3>Summary of Services:</h3>
+        <table border="1" style="border-collapse: collapse; border-color: rgb(2, 2, 24);">
+            <thead>
+                <tr style="background-color: red; color: white;">
+                    <th>Service</th>
+                    <th>Description</th>
+                    <th>Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Web Design</td>
+                    <td>Create visually appealing and functional websites tailored to your needs.</td>
+                    <td>$500</td>
+                </tr>
+                <tr>
+                    <td>Graphic Design</td>
+                    <td>Design eye-catching logos, banners, and other graphics for your brand.</td>
+                    <td>$300</td>
+                </tr>
+                <tr>
+                    <td>SEO Optimization</td>
+                    <td>Optimize your website to rank higher in search engine results and increase visibility.</td>
+                    <td>$200</td>
+                </tr>
+                <tr>
+                    <td>Content Writing</td>
+                    <td>Create engaging and SEO-friendly content for your website, blog, or social media.</td>
+                    <td>$100 per page</td>
+                </tr>
+                <tr>
+                    <td>Website Maintenance</td>
+                    <td>Ensure your website is up-to-date, secure, and running smoothly with regular maintenance.</td>
+                    <td>Starting from $50/month</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+</section>
+<header>
+<section id="projects">
+    <div class="container">
+        <h2>Projects</h2></header>
+        <p>Welcome to our projects page. Here are some of our featured projects.</p>
+        
+        <div class="project">
+            <h3>Project 1: Website Redesign</h3>
+            <p>A redesign of an existing website to improve user experience and modernize the design.</p>
+        </div>
+        
+        <div class="project">
+            <h3>Project 2: E-commerce Platform Development</h3>
+            <p>Development of a custom e-commerce platform with features for product management, shopping cart, and payment processing.</p>
+        </div>
+        
+        <div class="project">
+            <h3>Project 3: Mobile App Development</h3>
+            <p>Creation of a mobile application for iOS and Android platforms to provide users with access to specific services.</p>
+        </div>
+        
+        <div class="project">
+            <h3>Project 4: Social Media Campaign</h3>
+            <p>Planning and execution of a social media marketing campaign to increase brand awareness and engagement.</p>
+        </div>
+        
+        <div class="project">
+            <h3>Project 5: Data Analysis Dashboard</h3>
+            <p>Development of a data analysis dashboard to visualize and analyze key metrics for business insights.</p>
+        </div>
+    </div>
+</section>
+<header>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            
+            <div class="contact-form">
+                <style>
+                    .contact-form {
+                        background-color: pink;
+                        padding: 20px;
+                        border-radius: 10px;
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
+    
+                    .contact-form .form-heading {
+                        background-color: red;
+                        color: white;
+                        padding: 10px;
+                        border-radius: 5px;
+                        margin-bottom: 20px;
+                    }
+    
+                    .contact-form .form-group {
+                        margin-bottom: 20px;
+                    }
+    
+                    .contact-form label {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+    
+                    .contact-form input[type="text"],
+                    .contact-form input[type="email"],
+                    .contact-form textarea {
+                        width: 100%;
+                        padding: 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                    }
+    
+                    .contact-form input[type="submit"] {
+                        background-color: red;
+                        color: white;
+                        border: none;
+                        padding: 10px 20px;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+    
+                    .contact-form input[type="submit"]:hover {
+                        background-color: darkred;
+                    }
+    
+                    .direct-contact {
+                        text-align: center;
+                    }
+                </style>
+                <h3 class="form-heading">Get in Touch With Guadencia</h3>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Your name.." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Your email.." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" placeholder="Subject.." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" placeholder="Write something.." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+            
+            <div class="direct-contact">
+                <h3>Direct Contact Links:</h3>
+                <p><a href="mailto:example@example.com">Email: gaaudenciaamoiti2023@gamil.com</a></p>
+                <p><a href="https://wa.me/+254113109776">WhatsApp: +254113109776</a></p>
+                <p><a href="sms:+254113109776">SMS: +254113109776</a></p>
+                <p><a href="tel:+254113109776">Phone: 254113109776</a></p>
+            </div>
+        </div>
+    </section>
+    
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Gaudencia Personal Portfolio. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
